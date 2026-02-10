@@ -10,7 +10,7 @@ class Account:
     def deposit(self, money):
         self.balance += money
 
-    def withdraw(self. money):
+    def withdraw(self, money):
         if self.balance < money:
             return 0
         self.balance -= money
