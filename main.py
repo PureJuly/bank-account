@@ -60,8 +60,23 @@ def deposit_money():
             return
     print("유효하지 않은 ID 입니다.\n")
 
+def withdraw_money():
+    print("[출 금]")
+    try:
+        acc_id = int(input("계좌ID: "))
+        money = int(input("출금액: "))
+    except ValueError:
+        print("\n입력 형식이 올바르지 않습니다.\n")
+        return
 
-
+    for acc in acc_arr:
+        if acc.get_acc_id() == acc_id:
+            if acc.withdraw(money) == 0:
+                print("잔액부족\n")
+                return
+            print("출금완료\n")
+            return
+        print("유효하지 않은 ID입니다.\n")
 
 
 
