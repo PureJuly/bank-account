@@ -78,5 +78,7 @@ def withdraw_money():
             return
         print("유효하지 않은 ID입니다.\n")
 
-
+def show_all_acc_info():
+    for acc in acc_arr:
+        acc.show_info()
 
