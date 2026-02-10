@@ -38,18 +38,18 @@ def make_account():
         name = input("이름: ")
         balance = int(input("입금액: "))
         print()
-    except valueError
+    except ValueError:
         print("\n입력 형식이 올바르지 않습니다.\n")
         return
 
-acc_arr.append(Account(acc_id, balance=, name))
+    acc_arr.append(Account(acc_id, balance, name))
 
 def deposit_money():
     print("[입 금]")
     try:
         acc_id = int(input("계좌ID: "))
         money = int(input("입금액: "))
-    except ValueError
+    except ValueError:
         print("\n입력 형식이 올바르지 않습니다.\n")
         return
 
@@ -101,12 +101,12 @@ def main():
             withdraw_money()
         elif choice == INQUIRE:
             show_all_acc_info()
-        elif choice == EXIT
+        elif choice == EXIT:
             break
         else:
             print("잘못된 선택\n")
 
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     main()
 
